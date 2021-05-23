@@ -8,7 +8,7 @@ namespace ListOfShortLib
 {
     public class Node
     {
-        public short Number { get; internal set; }
-        internal Node Next { get; set; }
+        public short Number { get; internal set; }  // short number
+        internal Node Next { get; set; }            // next node
     }
 }

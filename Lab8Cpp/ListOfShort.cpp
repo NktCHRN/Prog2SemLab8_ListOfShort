@@ -12,7 +12,7 @@ void ListOfShort::AddLast(Node* newNode)
 {
     if (newNode != nullptr)
     {
-        if (_head == nullptr)
+        if (_head == nullptr)                       // for empty lists
         {
             _head = newNode;
         }
@@ -35,7 +35,7 @@ void ListOfShort::DeleteNode(Node* toDeletion)
     if (toDeletion != nullptr)
     {
         Node *temp = _head;
-        if (_head == toDeletion)
+        if (_head == toDeletion)                    // if we want to delete a head of the list
         {
             _head = toDeletion->_next;
             delete toDeletion;
@@ -142,5 +142,5 @@ short ListOfShort::operator[](int index)
 ListOfShort::~ListOfShort()
 {
     while (_head != nullptr)
-        DeleteNode(_head);
+        DeleteNode(_head);                  // deleting a head while list is not empty
 }

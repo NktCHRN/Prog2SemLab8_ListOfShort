@@ -23,7 +23,7 @@ namespace Lab8Console
             Console.WriteLine("Researching of building and using datastructures");
             Console.WriteLine("Variant 15");
         }
-        static void ListMenu(ListOfShort list)
+        static void ListMenu(ListOfShort list)                          // menu for a list
         {
             PrintHelp(list);
             Console.WriteLine("What do you want to do?");
@@ -97,7 +97,7 @@ namespace Lab8Console
                 }
             } while (choice != maxPoint);
         }
-        public static void PrintHelp(ListOfShort list)
+        public static void PrintHelp(ListOfShort list)                  // help (for the menu)
         {
             Console.Clear();
             ProgramInfo();
