@@ -9,7 +9,7 @@ namespace ListOfShortLib
     public class ListOfShort
     {
         private Node _head;                     // head of the list
-        public static Node CreateNode(short number)     // create a node
+        private Node CreateNode(short number)     // create a node
         {
             Node newNode = new Node
             {
@@ -18,8 +18,9 @@ namespace ListOfShortLib
             };
             return newNode;
         }
-        public void AddLast(Node newNode)       // add a node to the list
+        public void AddLast(short number)       // add a node to the list
         {
+            Node newNode = CreateNode(number);
             if (newNode != null)
             {
                 if (_head == null)              // for empty lists
@@ -38,35 +39,6 @@ namespace ListOfShortLib
             {
                 throw new ArgumentNullException(nameof(newNode), "Node cannot be null");
             }
-        }
-        public void DeleteNode(Node toDeletion)         // delete a node
-        {
-            if (toDeletion != null)
-            {
-                Node temp = _head;
-                if (_head == toDeletion)                // if we want to delete a head of the list
-                {
-                    _head = toDeletion.Next;
-                }
-                else
-                {
-                    while (temp != null && temp.Next != toDeletion)
-                        temp = temp.Next;
-                    if (temp != null)
-                        temp.Next = toDeletion.Next;
-                }
-            }
-            else
-            {
-                throw new ArgumentNullException(nameof(toDeletion), "Node cannot be null");
-            }
-        }
-        public Node Find(short number)                  // returns a Node if found, null if not
-        {
-            Node temp = _head;
-            while (temp != null && temp.Number != number)
-                temp = temp.Next;
-            return temp;
         }
         public int GetLength()                          // length of the list
         {

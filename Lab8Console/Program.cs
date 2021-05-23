@@ -55,8 +55,7 @@ namespace Lab8Console
                             Console.WriteLine("Enter the short number you want to add once more:");
                             parsed = short.TryParse(Console.ReadLine(), out number);
                         }
-                        Node newNode = ListOfShort.CreateNode(number);
-                        list.AddLast(newNode);
+                        list.AddLast(number);
                         Console.WriteLine("List of shorts current state:");
                         for (int i = 0; i < list.GetLength(); i++)
                             Console.Write(list[i] + " ");

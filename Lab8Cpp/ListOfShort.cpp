@@ -1,6 +1,6 @@
 #include "ListOfShort.h"
 
-Node* ListOfShort::CreateNode(short number)
+ListOfShort::Node* ListOfShort::CreateNode(short number)
 {
 	Node *newNode = new Node();
 	newNode->_number = number;
@@ -8,8 +8,9 @@ Node* ListOfShort::CreateNode(short number)
 	return newNode;
 }
 
-void ListOfShort::AddLast(Node* newNode)
+void ListOfShort::AddLast(short number)
 {
+    Node* newNode = CreateNode(number);
     if (newNode != nullptr)
     {
         if (_head == nullptr)                       // for empty lists
@@ -54,14 +55,6 @@ void ListOfShort::DeleteNode(Node* toDeletion)
     {
         throw std::logic_error("Node cannot be null");
     }
-}
-
-Node* ListOfShort::Find(short number)
-{
-    Node *temp = _head;
-    while (temp != nullptr && temp->_number != number)
-        temp = temp->_next;
-    return temp;
 }
 
 int ListOfShort::GetLength()

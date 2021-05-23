@@ -1,16 +1,18 @@
 #pragma once
-#include "Node.h"
 #include <exception>
 #include <stdexcept>
 
 class ListOfShort {
 private:
+    struct Node {
+        short _number;				           // short number
+        Node* _next;				           // next node
+    };
 	Node *_head;                               // head of the list
-public:
-    static Node* CreateNode(short number);     // create a node
-    void AddLast(Node* newNode);               // add a node to the list
+    Node* CreateNode(short number);            // create a node
     void DeleteNode(Node* toDeletion);         // delete a node
-    Node* Find(short number);                  // returns a Node if found, null if not
+public:
+    void AddLast(short number);                // add a node to the list
     int GetLength();                           // length of the list
     int CountMultiplesOfSeven();               // count, how many numbers in array can be divided by 7
     double GetAverage();                       // average of all elements in array

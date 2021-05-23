@@ -142,12 +142,10 @@
     <ClCompile Include="ConsoleProjectLib.cpp" />
     <ClCompile Include="Lab8Cpp.cpp" />
     <ClCompile Include="ListOfShort.cpp" />
-    <ClCompile Include="Node.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsoleProjectLib.h" />
     <ClInclude Include="ListOfShort.h" />
-    <ClInclude Include="Node.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

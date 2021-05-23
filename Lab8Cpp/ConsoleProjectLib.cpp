@@ -26,7 +26,6 @@ void ListMenu(ListOfShort* list) {
             cout << "Help - " << maxPoint - 1 << endl;
             choice = minPoint - 1;
         }
-        Node* newNode;
         switch (choice)
         {
         case 1:
@@ -43,8 +42,7 @@ void ListMenu(ListOfShort* list) {
                 cout << "Enter the short number you want to add once more:" << endl;
                 cin >> number;
             }
-            newNode = ListOfShort::CreateNode(number);
-            list->AddLast(newNode);
+            list->AddLast(number);
             cout << "List of shorts current state:" << endl;
             for (int i = 0; i < list->GetLength(); i++)
                 cout << (*list)[i] << " ";

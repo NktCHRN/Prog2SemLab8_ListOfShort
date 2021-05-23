@@ -18,9 +18,6 @@
     <ClCompile Include="Lab8Cpp.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Node.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="ListOfShort.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -29,9 +26,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Node.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="ListOfShort.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>

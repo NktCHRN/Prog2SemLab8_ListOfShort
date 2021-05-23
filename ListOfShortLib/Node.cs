@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ListOfShortLib
 {
-    public class Node
+    internal class Node
     {
-        public short Number { get; internal set; }  // short number
+        internal short Number { get; set; }         // short number
         internal Node Next { get; set; }            // next node
     }
 }
